@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CODNITIVE
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Codnitive
+ * @package    Codnitive_Iranianregions
+ * @author     Hassan Barza <support@codnitive.com>
+ * @copyright  Copyright (c) 2011 CODNITIVE Co. (http://www.codnitive.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Codnitive_Iranianregions>
+            <version>1.7.28</version>
+            <title>Iranian Regions NE</title>
+            <link><![CDATA[http://www.codnitive.com/]]></link>
+        </Codnitive_Iranianregions>
+    </modules>
+    <global>
+        <helpers>
+            <iranianregions>
+                <class>Codnitive_Iranianregions_Helper</class>
+            </iranianregions>
+        </helpers>
+        <resources>
+            <iranianregions_setup>
+                <setup>
+                    <module>Codnitive_Iranianregions</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </iranianregions_setup>
+            <iranianregions_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </iranianregions_write>
+            <iranianregions_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </iranianregions_read>
+        </resources>
+    </global>
+    
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <codnitivegeneral>
+                                            <title>CODNITIVE General</title>
+                                        </codnitivegeneral>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+		
+        <translate>
+            <modules>
+                <Codnitive_Iranianregions>
+                    <files>
+                        <default>Codnitive_Iranianregions.csv</default>
+                    </files>
+                </Codnitive_Iranianregions>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>
